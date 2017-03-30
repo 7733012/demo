@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+
+
+$(function(){
+	var infotxt='、捷最爱乔洋oh拜托你的烂借口不过是想要自由OK我现在放你走一个人承受就是你的烂借口多么可笑的温柔现实是天真的凶手你的城府没人猜的透车窗外的雨滴滴落在我的心底用怎样的词句描绘自私的你你不值得我哭泣尽管轻视这感情纯洁的外表里藏着最虚伪的你我恨自己没有看清这般丑陋的爱情几句安抚的话语我竟无条件相信你自私的那样彻底我爱的不可思议至少我还在一起谁让我无知到相信奇迹oh拜托你的烂借口不过是想要自由OK我现在放你走一个人承受就是你的烂借口多么可笑的温柔现实是天真的凶手你的城府没人猜的透恭喜你终于卸掉了我这包袱不用再用谎话来铺垫你和我的路在一起走过的日子即使铭心在刻苦也敌不过这深埋的心机终结的痛处要知道爱情是用忠心来铺成的路可是你太过的虚假什么企图能否自述反正也只剩下回忆没什么好值得在乎干脆就各自离开选择各自要走的路我恨自己没有看清这般丑陋的爱情几句安抚的话语我竟无条件相信你自私的那样彻底我爱的不可思议至少我还在一起谁让我无知到相信奇迹oh拜托你的烂借口不过是想要自由OK我现在放你走一个人承受就是你的烂借口多么可笑的温柔现实是天真的凶手你的城府没人猜的透oh你的烂借口不过是想要自由OK我现在放你走一个人承受就是你的烂借口多么可笑的温柔现实是天真的凶手你的城府没人猜的透'
+	$('#bt').click(function(){
+		$('.info').text("请等待..").hide(500);
+		//alert('d');
+		//异步请求
+		$.ajax({
+			url:'zhijia.php',
+			data:{name:"李根",info:infotxt+Date()},
+			success:function(data){
+				
+					
+					$('.info').text(data).show(1000);
+					//$('#baidu').load('http://www.baidu.com');
+				}
+				
+			
+			})
+			
+		
+		
+		
+		
+		})
+	
+	
+	
+	
+	
+	
+	
+	
+	})
+</script>
+</head>
+
+<body>
+<style>
+.info{display:none;}
+</style>
+
+<input type="button" value="获取信息" id='bt'/>
+
+<div class="info"></div>
+<div id="baidu"></div>
+
+</body>
+</html>
