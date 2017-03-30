@@ -1,0 +1,13 @@
+{
+    "name": "7733012/demo2",
+    "description": "test",
+    "type": "project",
+    "authors": [
+        {
+            "name": "ligen",
+            "email": "7733012@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
