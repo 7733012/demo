@@ -1,0 +1,64 @@
+<html>
+<meta charset="utf-8">
+<head>
+<title>标题_淘宝搜索</title>
+</head>
+<body>
+<script type = "text/javascript">
+  // AJAX方法, 被自定义封装在该函数中
+   function ajaxFunction( url )
+   {
+    var xmlHttp;
+    try
+    {
+  // Firefox, Opera 8.0+, Safari
+  xmlHttp = new XMLHttpRequest();    // 实例化对象
+    }
+    catch( e )
+    {
+     // Internet Explorer
+     try
+     {
+      xmlHttp = new ActiveXObject( "Msxml2.XMLHTTP" );
+     }
+     catch ( e )
+     {
+      try
+      {
+       xmlHttp = new ActiveXObject( "Microsoft.XMLHTTP" );
+      }
+      catch( e )
+      {
+       alert("您的浏览器不支持AJAX！");
+       return false;
+      }
+     }
+    }
+    xmlHttp.onreadystatechange = function()
+    {
+     if( xmlHttp.readyState == 4  && xmlHttp.status == 200 )
+     {
+      document.getElementByIdx_x_x_x( 'sub' ).value =  xmlHttp.responseText;
+     }
+    }
+    xmlHttp.open( "GET", url, true );
+    xmlHttp.send( null );
+   }
+ 
+   function chg()
+   {
+    var value = document.title;
+    alert(value)
+    if( '' != value )
+    {
+     //alert( value );
+     ajaxFunction( 'http://localhost/k/kajax.php?keyword='+value );    // 注意在后缀.php之后加传值是先用?分隔再添加数据
+    }
+   }
+   chg();
+ </script>
+
+
+	111
+</body>
+</html>
