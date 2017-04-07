@@ -1,5 +1,0 @@
-k_js.php 截取js的地址
-
-kajax.php ajax提交的地址
-
-11.html 测试地址
